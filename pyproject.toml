@@ -1,0 +1,16 @@
+[project]
+name = "spirelia-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "bs4>=0.0.2",
+    "ipykernel>=6.29.5",
+    "langchain-mistralai>=0.2.10",
+    "langchain[anthropic]>=0.3.25",
+    "langgraph>=0.4.7",
+    "langgraph-supervisor>=0.0.25",
+    "ruff>=0.11.11",
+    "tavily-python>=0.7.3",
+]  
