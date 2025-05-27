@@ -22,11 +22,10 @@ class Analyzer:
             "remaining_steps": 5
         }
 
-        print("Initial state:", state)
-        response = self.supervisor.stream(state)
-        print("State after supervisor invoke:", response.content)
+        response = self.supervisor.invoke(state)
+        print("Final State: ", response)
 
-        return {"output": response.content}
+        return {"output": response.get("report", "No report generated.")}
 
     def __init__(self):
         self.model = init_chat_model(
